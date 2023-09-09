@@ -1,15 +1,30 @@
-async function getData(city) {
-    const api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=5384bb69bc2a4cf2878214847230809`
-    try {
-        const response = await fetch(api, { mode: "cors"})
-        const data = convertData(await response.json())
-        return data
-    } catch (error) {
-        alert (error)
-        return;
+const weather = (() => {
+    function convertData(data) {
+        const {
+            name: cityName,
+            main: { temp: temperature, feels_like: feelsLike, humidity },
+            wind: { speed: windSpeed },
+        } = data;
+        return { cityName, temperature, feelsLike, humidity, windSpeed }
+    }
+
+    async function getData(city) {
+        const api = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=092ee1348dd5e84068aba00e5cf9264c`
+        try {
+            const response = await fetch(api, { mode: "cors" })
+            const data = convertData(await response.json())
+            return data
+        } catch (error) {
+            alert (error)
+            return;
+        }
+        
     }
     
-}
+        return { getData }
+})();
 
-    return { getData };
+export default weather;
+
+
 
