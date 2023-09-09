@@ -12,6 +12,7 @@ const weather = (() => {
         const api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=092ee1348dd5e84068aba00e5cf9264c`
         try {
             const response = await fetch(api, { mode: "cors" })
+            if (!response.ok) throw new Error(`City ${city} not found`)
             const data = convertData(await response.json())
             return data
         } catch (error) {
