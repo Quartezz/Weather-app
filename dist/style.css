@@ -1,130 +1,148 @@
 :root {
-    --primary-light: #faf3e0;
-    --secondary-light: #acb4f4;
-    --primary-dark: #1e212d;
-    --secondary-dark: #6870e0;
+    --primary-light: #83cee0;
+    --secondary-light: #a4fbe3;
+    --primary-dark: #5f5dbd;
+    --secondary-dark: #5e87b8;
   }
   
-  *,
-  *::before,
-  *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
   }
   
-  html {
-    font-size: 62.5%;
-    line-height: 1.6;
-  }
+html {
+  font-size: 62.5%;
+  line-height: 1.6;
+}
   
-  body {
-    font-family: "Roboto", sans-serif;
-    font-size: 1.6rem;
-    background-color: var(--secondary-dark);
-  }
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--secondary-dark);
+}
   
-  header {
-    font-family: "Antic Slab", serif;
-    font-size: 2.4rem;
-  }
+header {
+  font-size: 2.4rem;
+}
   
-  button,
-  input {
-    padding: 0.5rem;
-    border: none;
-    border-radius: 5px;
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
-    outline: none;
-  }
+button,
+input {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+}
   
-  button {
-    cursor: pointer;
-  }
+button {
+  cursor: pointer;
+}
   
-  /* Header */
+/* Header */
   
-  .header {
-    padding: 2rem;
-    background-color: var(--primary-dark);
-    color: var(--secondary-light);
-  }
+.header {
+  padding: 2rem;
+  background-color: var(--primary-dark);
+  color: var(--secondary-light);
+}
   
-  .page-name {
-    text-align: center;
-  }
+.page-name {
+  text-align: center;
+}
   
-  .page-name i {
-    color: var(--primary-light);
-    margin-right: 1rem;
-  }
+.page-name i {
+  color: var(--primary-light);
+  margin-right: 1rem;
+ }
   
-  /* Main */
+/* Main */
   
-  .main {
-    padding: 2rem;
-    margin-top: 2rem;
-  }
+.main {
+  padding: 2rem;
+  margin-top: 2rem;
+}
   
-  .form {
-    padding: 1rem;
-    text-align: center;
-  }
+.form {
+  padding: 1rem;
+  text-align: center;
+}
   
-  .input {
-    margin-right: 0.5rem;
-    background-color: var(--secondary-light);
-    color: var(--primary-dark);
-    border: 2px solid transparent;
-  }
+.input {
+  margin-right: 0.5rem;
+  background-color: var(--secondary-light);
+  color: var(--primary-dark);
+  border: 2px solid transparent;
+}
   
-  .btn {
-    background-color: var(--primary-dark);
-    color: var(--primary-light);
-    transition: border 0.2s ease-in-out;
-    border: 2px solid transparent;
-  }
+.btn {
+   background-color: var(--primary-dark);
+   color: var(--primary-light);
+   transition: border 0.2s ease-in-out;
+   border: 2px solid transparent;
+}
   
-  .btn:hover {
-    border: 2px solid var(--secondary-light);
-  }
+.btn:hover {
+   border: 2px solid var(--secondary-light);
+}
   
-  .btn:active {
-    color: #999;
-  }
+.btn:active {
+   color: var(--primary-light);
+ }
   
-  .search-result {
-    display: none;
-    max-width: 300px;
-    padding: 2rem;
-    border-radius: 5px;
-    margin: 4rem auto;
-    background-color: var(--primary-dark);
-    color: var(--primary-light);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  }
+.search-result {
+  display: none;
+  max-width: 300px;
+  padding: 2rem;
+  border-radius: 5px;
+  margin: 4rem auto;
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
   
-  .search-result.active {
-    display: block;
-  }
+.search-result.active {
+  display: block;
+}
   
-  .search-result * {
-    padding: 0.5rem;
-    text-align: center;
-  }
+.search-result * {
+  padding: 0.5rem;
+  text-align: center;
+}
   
-  .search-result h3 {
-    border-radius: 5px;
-    color: var(--secondary-light);
-    font-size: 4rem;
-  }
+.search-result h3 {
+  border-radius: 5px;
+  color: var(--secondary-light);
+  font-size: 4rem;
+}
   
-  .search-result p:nth-child(2) {
-    font-size: 3.6rem;
-  }
+.search-result p:nth-child(2) {
+  font-size: 3.6rem;
+}
   
-  .search-result p {
-    font-size: 2rem;
-  }
+.search-result p {
+  font-size: 2rem;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  font-size: 2rem;
+  background-color: var(--primary-dark);
+}
+
+footer p,
+.fa-github {
+  color: var(--primary-light);
+}
+
